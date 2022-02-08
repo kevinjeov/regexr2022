@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./storage.js"></script>
+</head>
+<body>
+  <ul>
+    <li><a href="./index.html">Main</a></li>
+    <li><a href="./lodash.html">lodash</a></li>
+    <li><a href="./json.html">json</a></li>
+    <li><a href="./storage.html">storage</a></li>
+    <li><a href="./OMDbapi.html">OMDb api</a></li>
+    <li><a href="./regexr.html">정규표현식</a></li>
+  </ul>
+  <h4>
+    로컬 스토리지 vs. 세션 스토리지
+웹 스토리지(web storage)에는 로컬 스토리지(localStorage)와 <br>세션 스토리지(sessionStorage)가 있습니다.<br>
+이 두 개의 매커니즘의 차이점은 데이터가 어떤 범위 내에서 얼마나 오래 보존되느냐에 있습니다.<br>
+세션 스토리지는 웹페이지의 세션이 끝날 때 저장된 데이터가 지워지는 반면에, 로컬 스토리지는 웹페이지의 세션이<br>
+끝나더라도 데이터가 지워지지 않습니다.<br>
+다시 말해, 브라우저에서 같은 웹사이트를 여러 탭이나 창에 띄우면, 여러 개의 세션 스토리지에 데이터가 서로 격리되어 저장되며,<br>
+ 각 탭이나 창이 닫힐 때 저장해 둔 데이터도 함께 소멸합니다. 반면에, 로컬 스토리지의 경우 여러 탭이나 창 간에 데이터가<br>
+  서로 공유되며 탭이나 창을 닫아도 데이터는 브라우저에 그대로 남아 있습니다.<br>
+하지만 이러한 로컬 스토리지의 데이터 영속성(persistence) 어디까지나 계속해서 동일한 컴퓨터에서 동일한 브라우저를<br>
+ 사용할 때만 해당합니다. 즉, 같은 컴퓨터에서 다른 브라우저를 사용하거나 (e.g. 크롬을 쓰다가 사파리를 쓰면),<br>
+  또는 다른 컴퓨터에서 같은 브라우저를 사용하는 경우에는 (e.g. 집에서 크롬을 쓰다가 회사에서 크롬을 쓰면), <br>
+  엄연히 다른 브라우저이므로 서로 다른 두 개의 로컬 스토리지에 데이터가 저장될 것입니다. <br>
+  (다른 기기나 브라우저 간에 데이터가 공유되고 영속되야 한다면 당연히 클라우드(Cloud) 플랫폼이나<br>
+   데이터베이스(DB) 서버를 사용해야 겠죠?)<br>
+로컬 스토리지와 세션 스토리지의 공통점은 두 기술 모두 데이터를 브라우저 상에 저장한다는 것이며, 자바스크립트 API가 <br>
+완전히 동일한 형태입니다. 따라서, 본 포스팅에서는 로컬 스토리지 기준으로만 예시를 드리려고 합니다. 세션 스토리지를<br>
+ 사용하실 때는 예제 코드의 localStorage 부분을 sessionStorage로 대체하시기만 하면 됩니다.<br>
+  </h4>
+
+  <p><b>로컬스토리지 (Local Storage) </b> : 현재 출처의 로컬 저장 공간에 접근할 수 있는 Storage 객체. <b>(데이터가 만료되지 않음)</b></p>
+  <p><b>세션스토리지 (Session Storage) </b> : 현재 출처의 세션 저장 공간에 접근할 수 있는 Storage 객체. <b>(페이지 세션이 끝나면 만료)</b></p>
+  <p><a href="https://github.com/typicode/lowdb">※ 참고 : Lowdb 사용방법 github 사이트</a></p>
+</body>
+</html>
